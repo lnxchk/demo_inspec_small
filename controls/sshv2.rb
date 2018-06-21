@@ -8,9 +8,9 @@ control 'sshd_config-01' do
   desc <<-EOF
     SSH supports two different protocol versions. The original version, SSHv1, was subject to a number of security issues. Please use SSHv2 instead to avoid these.
   EOF
-  describe sshd_config do {
+  describe sshd_config do 
     its('Protocol') { should cmp 2 }
-  }
+  end
 end
 
 
