@@ -4,7 +4,7 @@ control 'service-user-01' do
   desc "Ensure that the servusr account has its shell set to /bin/false"
 
   describe user('servusr') do
-    its('shell') { should_be '/bin/false' }
+    its('shell') { should eq '/bin/false' }
   end
 end
 
